@@ -21,7 +21,7 @@ export default class Timeline extends Component {
 	}
 
 	subscribeToEvents = () => {
-		const io = socket('http://localhost:3000');
+		const io = socket('https://backend-goweek2018.herokuapp.com');
 
 		io.on('tweet', data => {
 			this.setState({ tweets: [data, ...this.state.tweets] })
